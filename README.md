@@ -49,7 +49,6 @@ use EBT\ConfigLoader\YamlFileLoader;
 $yamlLoader = new YamlFileLoader();
 // this will read the file and return it as array
 $content = $yamlLoader->load(__DIR__ . '/test.yml');
-require 'vendor/autoload.php';
 ```
 
 ## Contributing ##
