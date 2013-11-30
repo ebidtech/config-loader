@@ -3,7 +3,7 @@
 Symfony 2 config component extra loaders.
 
 [![Latest Stable Version](https://poser.pugx.org/ebidtech/config-loader/v/stable.png)](https://packagist.org/packages/ebidtech/config-loader)
- [![Build Status](https://travis-ci.org/ebidtech/compress.png?branch=master)](https://travis-ci.org/ebidtech/compress) [![Coverage Status](https://coveralls.io/repos/ebidtech/compress/badge.png?branch=master)](https://coveralls.io/r/ebidtech/compress?branch=master) [![Dependency Status](https://www.versioneye.com/user/projects/52977ab3632baca8b4000002/badge.png)](https://www.versioneye.com/user/projects/52977ab3632baca8b4000002)
+ [![Build Status](https://travis-ci.org/ebidtech/compress.png?branch=master)](https://travis-ci.org/ebidtech/compress) [![Coverage Status](https://coveralls.io/repos/ebidtech/compress/badge.png?branch=master)](https://coveralls.io/r/ebidtech/compress?branch=master) [![Dependency Status](https://www.versioneye.com/user/projects/5299e146632bac33e8000014/badge.png)](https://www.versioneye.com/user/projects/5299e146632bac33e8000014)
 ## Requirements ##
 
 * PHP >= 5.4
