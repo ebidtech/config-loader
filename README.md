@@ -40,6 +40,17 @@ require 'vendor/autoload.php';
 
 ## Usage ##
 
+You can read about [Symfony 2 config component](http://symfony.com/doc/2.3/components/config/introduction.html).
+
+Example of simple use:
+```php
+use EBT\ConfigLoader\YamlFileLoader;
+
+$yamlLoader = new YamlFileLoader();
+// this will read the file and return it as array
+$content = $yamlLoader->load(__DIR__ . '/test.yml');
+require 'vendor/autoload.php';
+```
 
 ## Contributing ##
 

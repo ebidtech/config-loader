@@ -103,7 +103,7 @@ class YamlFileLoaderTest extends TestCase
 
     public function testLoadYamlFile()
     {
-        $yamlLoader = (new YamlFileLoader());
+        $yamlLoader = new YamlFileLoader();
         $content = $yamlLoader->load(__DIR__ . '/test.yml');
         $this->assertEquals(
             array('justatest' => array('bla' => 'val', 'bla2' => 'val2')),

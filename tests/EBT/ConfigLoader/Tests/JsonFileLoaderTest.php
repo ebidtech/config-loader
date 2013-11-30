@@ -101,7 +101,7 @@ class JsonFileLoaderTest extends TestCase
 
     public function testLoadJsonFile()
     {
-        $yamlLoader = (new JsonFileLoader());
+        $yamlLoader = new JsonFileLoader();
         $content = $yamlLoader->load(__DIR__ . '/test.json');
         $this->assertEquals(
             array('justatest' => array('bla' => 'val', 'bla2' => 'val2')),
