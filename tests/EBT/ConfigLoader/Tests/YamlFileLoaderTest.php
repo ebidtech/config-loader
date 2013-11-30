@@ -14,8 +14,7 @@ namespace EBT\ConfigLoader\Tests;
 use EBT\ConfigLoader\YamlFileLoader;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
-use JMS\Serializer\SerializerBuilder;
-use JMS\Serializer\SerializationContext;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * YamFileLoaderTest
@@ -83,9 +82,8 @@ class YamlFileLoaderTest extends TestCase
 
     public function testLoad()
     {
-        $serializer = SerializerBuilder::create()->build();
         $initialContent = array('hello' => 'world');
-        $ymlContent = $serializer->serialize($initialContent, 'yml');
+        $ymlContent = Yaml::dump($initialContent);
 
         vfsStream::create(array('file1' => $ymlContent), $this->root);
 
