@@ -1,0 +1,28 @@
+{
+    "name": "ebidtech/config-loader",
+    "type": "library",
+    "description": "Symfony 2 config component extra loaders",
+    "keywords": ["symfony", "php", "library", "config", "loader", "yaml", "json"],
+    "homepage": "http://github.com/ebidtech/config-loader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ebidtech",
+            "email": "developers@ebidtech.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/config": "2.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "satooshi/php-coveralls": "dev-master",
+        "mikey179/vfsStream": "1.2.*",
+        "jms/serializer": "0.13.*"
+    },
+    "autoload": {
+        "psr-0": { "EBT\\ConfigLoader": "src/" }
+    }
+}
