@@ -44,12 +44,14 @@ class YamlFileLoader extends Loader
         }
 
         /* Explicitly reading file's content, because support for passing file names is deprecated since Symfony 2.8. */
-        $content = Yaml::parse(file_get_contents($resource));
-        if (! is_array($content)) {
+        $content = file_get_contents($resource);
+        $parsedYaml = Yaml::parse($content);
+
+        if (! is_array($parsedYaml)) {
             throw new InvalidArgumentException(sprintf('Could not parse Yaml of file "%s"', $resource));
         }
 
-        return $content;
+        return $parsedYaml;
     }
 
     /**
