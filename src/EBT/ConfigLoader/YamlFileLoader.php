@@ -11,9 +11,9 @@
 
 namespace EBT\ConfigLoader;
 
+use EBT\ConfigLoader\Exception\InvalidArgumentException;
 use Symfony\Component\Config\Loader\Loader;
 use Symfony\Component\Yaml\Yaml;
-use EBT\ConfigLoader\Exception\InvalidArgumentException;
 
 /**
  * YamlFileLoader
@@ -34,12 +34,18 @@ class YamlFileLoader extends Loader
      */
     public function load($resource, $type = null)
     {
-        if (!is_file($resource)) {
+        if (! is_file($resource)) {
             throw new InvalidArgumentException(sprintf('File "%s" is not a regular file.', $resource));
         }
 
-        $content = Yaml::parse($resource);
-        if (!is_array($content)) {
+        /* Checking file readability before hand to ensure getting its contents never fail. */
+        if (! is_readable($resource)) {
+            throw new InvalidArgumentException(sprintf('File "%s" is not readable.', $resource));
+        }
+
+        /* Explicitly reading file's content, because support for passing file names is deprecated since Symfony 2.8. */
+        $content = Yaml::parse(file_get_contents($resource));
+        if (! is_array($content)) {
             throw new InvalidArgumentException(sprintf('Could not parse Yaml of file "%s"', $resource));
         }
 
